@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap.min.css" />
+  <link rel="stylesheet" href="todo.css">
+  <script src="./jquery.min.js"></script>  
+  
+  <title>TO DO LIST</title>
+</head>
+<body>
+  <div class="col-sm-12  col-md-8">
+  <div class="container"  id="blur">
+    <div class="header" id="new">
+      <input type="text" name="txt" placeholder="Enter your task" id="txt" onkeyup="myFunction()">
+      <button class="searchbtn" >Search</button>
+     <div class="count">
+        <p> <span id='total'>0</span> Tasks </p>
+        <button type="button" class="openbtn" onclick="toggle(); openForm();">&#43;</button>
+   
+      </div>
+      <div id="date"> 
+       </div>
+       <div id="day"></div>
+      <div id="time"></div>
+      <div id="month"></div>
+    </div>
+   <div class="content" id="tasks">
+   </div>
+</div>
+</div>
+<div class="col-sm-6">
+  <div id="popup">
+    <div class="form-popup" id="myForm"> 
+      <input type="text"  name="task" placeholder="Enter your Task" id="todolist" >
+      <input type="time" name="clocktime" id="clock" >      
+      <button type="submit" class="btn" id="add" onclick="toggle(); closeForm();" >ADD</button>
+      <button type="button" class="btn cancel"  id="cancel" onclick="toggle(); closeForm();">CANCEL</button>
+      </div> 
+  </div> 
+  </div>  
+  <script   src="todo.js">
+  </script>
+</body>
+</html>
